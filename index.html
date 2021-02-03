@@ -91,6 +91,12 @@
                             <p class="d-lg-none d-xl-none">GitHub</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Visit my Blog" data-placement="bottom" href="https://fazals.ddns.net" target="_blank">
+                            <i class="tim-icons icon-book-bookmark"></i>
+                            <p>Blog</p>
+                        </a>
+                    </li>
                     <!-- <li class="dropdown nav-item">
                         <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                             <i class="fa fa-cogs d-lg-none d-xl-none"></i> Getting started
@@ -112,7 +118,7 @@
                     </li> -->
                     <li class="nav-item">
                         <a class="nav-link btn btn-default d-lg-block" href="javascript:void(0)" onclick="scrollToProjects()">
-                            <i class="tim-icons icon-cloud-download-93"></i> View My Projects
+                            <i class="tim-icons icon-minimal-down"></i> View My Projects
                         </a>
                     </li>
                 </ul>
@@ -132,15 +138,38 @@
             <div class="container">
                 <div class="content-center brand">
                     <h1 class="h1-seo">Hi There!</h1>
+                    <h3><a href="javascript:void(0)" onclick="scrollToIntro()"><i class="tim-icons icon-minimal-down"></i></a></h3>
+                </div>
+            </div>
+        </div>
+        <div class="page-header header-filter section-intro">
+            <div class="squares square3"></div>
+            <div class="squares square4"></div>
+            <div class="squares square5"></div>
+            <div class="squares square6"></div>
+            <div class="squares square7"></div>
+            <div class="container">
+                <div class="content-center">
+                    <h2>I'm Mohamed Farhan Fazal</h2>
+                    <p style="font-size: 1.3rem;">I love working with electronics, developing websites, networking, automating tasks and IoT.</p>
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-success" onclick="window.open('https://resume.io/r/WjeJvs4jz')">View my resume</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-info" onclick="scrollToProjects()">View projects</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-warning" onclick="window.open('https://fazals.ddns.net')">View Blog</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="section section-projects">
             <div class="container">
-                <div class="row justify-content-center">
-                    <h1 class="alert alert-primary" role="alert">
-                        Projects
-                    </h1>
+                <div class="col-12 text-center">
+                    <button type="button" class="btn btn-primary" onclick="scrollToProjects()">Projects<span class="badge badge-default">2</span></button>
                 </div>
             </div>
         </div>
@@ -160,43 +189,6 @@
               </button>
                         </div>
                     </div>
-                    <!-- <div class="col-md-6">
-                        <div class="row justify-content-between align-items-center">
-                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="carousel-item active">
-                                        <img class="d-block" src="../assets/projectImages/FilterDesigner1.png" alt="First slide">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5></h5>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block" src="../assets/projectImages/FilterDesigner2.png" alt="Second slide">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5></h5>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block" src="../assets/projectImages/FilterDesigner3.png" alt="Third slide">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                    <i class="tim-icons icon-minimal-left"></i>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                    <i class="tim-icons icon-minimal-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="col-md-6 ml-auto">
                         <img src="../assets/projectImages/FilterDesigner1.png" alt="">
                     </div>
@@ -334,6 +326,15 @@
             if ($('.section-projects').length != 0) {
                 $("html, body").animate({
                     scrollTop: $('.section-projects').offset().top
+                }, 1000);
+            }
+        }
+
+        function scrollToIntro() {
+
+            if ($('.section-intro').length != 0) {
+                $("html, body").animate({
+                    scrollTop: $('.section-intro').offset().top
                 }, 1000);
             }
         }
