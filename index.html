@@ -35,6 +35,7 @@
     <link href="./assets/css/blk-design-system.css?v=1.0.0" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="./assets/demo/demo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/imageHoverAnimation.css">
 </head>
 
 <body class="index-page">
@@ -169,7 +170,7 @@
         <div class="section section-projects">
             <div class="container">
                 <div class="col-12 text-center">
-                    <button type="button" class="btn btn-primary" onclick="scrollToProjects()">Projects<span class="badge badge-default">2</span></button>
+                    <button type="button" class="btn btn-primary" onclick="scrollToProjects()">Projects</button>
                 </div>
             </div>
         </div>
@@ -177,21 +178,28 @@
         <section class="container">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-lg-5">
                         <h1 class="profile-title text-left">DSP - Digital Filter Design</h1>
                         <h5 class="text-on-back">01</h5>
-                        <p class="profile-description text-left">A web application/tool to design Butterworth and Chebyshev analog filters with both analog and digital domain frequency at the input parameter side.</p>
-                        <div class="btn-wrapper pt-3">
-                            <button onclick="window.open('https://github.com/fazalfarhan01/dsp-filters')" class="btn btn-simple btn-primary">
+                        <div class="card-body">
+                            <p class="profile-description text-left">A web application/tool to design Butterworth and Chebyshev analog filters with both analog and digital domain frequency at the input parameter side.</p>
+                            <div class="btn-wrapper pt-3 text-lg-left text-center">
+                                <button onclick="window.open('https://github.com/fazalfarhan01/dsp-filters')" class="btn btn-simple btn-primary">
                 <i class="tim-icons icon-book-bookmark"></i> Code
               </button>
-                            <button onclick="window.open('https://dspfilters.fazals.ml/chebyshev-filter/#filterDesignerForm')" class="btn btn-simple btn-info">
+                                <button onclick="window.open('https://dspfilters.fazals.ml/chebyshev-filter/#filterDesignerForm')" class="btn btn-simple btn-info">
                 <i class="tim-icons icon-bulb-63"></i> Demo
               </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 ml-auto">
-                        <img src="../assets/projectImages/FilterDesigner1.png" alt="">
+                    <div class="col-lg-6 ml-auto my-auto">
+                        <div class="hover hover-5 text-white rounded"><img src="../assets/projectImages/FilterDesigner1.png" alt="">
+                            <div class="hover-overlay"></div>
+                            <div class="hover-5-content">
+                                <h3 class="hover-5-title text-uppercase font-weight-light mb-0">Filter <strong class="font-weight-bold text-white">Design </strong><span>DSP</span></h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -200,16 +208,25 @@
         <section class="section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-lg-6 my-auto mr-auto order-lg-1 order-2">
+                        <!-- <img src="https://raw.githubusercontent.com/fazalfarhan01/Auto-CPY/master/web/images/AppInterface1.png" alt=""> -->
+                        <div class="hover hover-5 text-white rounded"><img src="https://raw.githubusercontent.com/fazalfarhan01/Auto-CPY/master/web/images/AppInterface1.png" alt="">
+                            <div class="hover-overlay"></div>
+                            <div class="hover-5-content">
+                                <h3 class="hover-5-title text-uppercase font-weight-light mb-0">Auto <strong class="font-weight-bold text-white">CPY </strong><span></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 order-1">
                         <div class="card card-plain">
                             <div class="card-header">
-                                <h1 class="profile-title text-left">SCRCPY GUI</h1>
+                                <h1 class="profile-title text-left">Auto-CPY | A GUI for Scrcpy</h1>
                                 <h5 class="text-on-back">02</h5>
                             </div>
                             <div class="card-body">
                                 <div>
                                     <p class="profile-description text-left">A Desktop Application with backend in Python and UI in plain HTML, CSS and JS. A GUI tool for the famous android screen mirroring application <a href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener noreferrer">scrcpy</a>.</p>
-                                    <div class="btn-wrapper pt-3">
+                                    <div class="btn-wrapper pt-3 text-lg-right text-center">
                                         <button onclick="window.open('https://github.com/fazalfarhan01/Auto-CPY')" class="btn btn-simple btn-primary">
                             <i class="tim-icons icon-book-bookmark"></i> Code
                           </button>
@@ -220,9 +237,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 ml-auto">
-                        <img src="https://raw.githubusercontent.com/fazalfarhan01/Auto-CPY/master/web/images/AppInterface1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -236,7 +250,7 @@
                         <h5 class="text-on-back">03</h5>
                         <p class="profile-description text-left">Home Appliances Control and Automation, project relies on Blynk Server for communication between mobile app and hardware connected to the network.<br>Android App built on Kodular.
                         </p>
-                        <div class="btn-wrapper pt-3">
+                        <div class="btn-wrapper pt-3 text-lg-left text-center">
                             <button onclick="window.open('https://github.com/fazalfarhan01/NodeMCU-OTA-Updates')" class="btn btn-simple btn-primary">
                 <i class="tim-icons icon-book-bookmark"></i> Code
               </button>
@@ -245,8 +259,7 @@
               </button> -->
                         </div>
                     </div>
-                    <div class="col-md-6 ml-auto">
-
+                    <div class="col-md-6 ml-auto m-auto">
                         <div id="project3Carousel" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
                                 <li data-target="#project3Carousel" data-slide-to="0" class="active"></li>
@@ -276,6 +289,38 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project 4 -->
+        <section class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 my-auto mr-auto order-lg-1 order-2">
+                        <div class="hover hover-5 text-white rounded">
+                            <img src="./assets/img/SkillOnStore16x9.png" alt="Alexa Skill">
+                            <div class="hover-overlay"></div>
+                            <div class="hover-5-content">
+                                <h3 class="hover-5-title text-uppercase font-weight-light mb-0">Blynk <strong class="font-weight-bold text-white">Alexa </strong><span>Skill</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 order-lg-2 order-1">
+                        <h1 class="profile-title text-left">Alexa Skill to Control Blynk Server</h1>
+                        <h5 class="text-on-back">04</h5>
+                        <p class="profile-description text-left">This project is an extension to IoT Home Automation which worked on Blynk as backend. Blynk Server supports REST API which is used in this project.
+                            <br>This alexa skill is written in python and is deployed on AWS Lambda. When alexa is asked to perform some action, it grabs a few predefined keywords for the said phrase, and then passes it on to the code. The python code
+                            processes the info passed on and triggers a webhook to control the server.
+                        </p>
+                        <div class="btn-wrapper pt-3 text-lg-left text-center">
+                            <button onclick="window.open('https://github.com/fazalfarhan01/Blynk-Alexa-Skill')" class="btn btn-simple btn-primary">
+                <i class="tim-icons icon-book-bookmark"></i> Code
+              </button>
+                            <button onclick="window.open('https://youtu.be/-QCHVpMyGWA')" class="btn btn-simple btn-info">
+                <i class="tim-icons icon-bulb-63"></i>Video Demo
+              </button>
                         </div>
                     </div>
                 </div>
