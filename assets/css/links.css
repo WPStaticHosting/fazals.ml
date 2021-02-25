@@ -4,12 +4,16 @@ body {
     color: #fff;
     /* background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB); */
     /* background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%); */
-    background-color: #21D4FD;
-    background-image: linear-gradient(45deg, #21D4FD 0%, #B721FF 33%, #ffd903 66%, #00c4ff 100%);
+    /* background-color: #21D4FD;
+    background-image: linear-gradient(45deg, #21D4FD 0%, #B721FF 33%, #ffd903 66%, #00c4ff 100%); */
+    /* background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 30%, #FFCC70 66%, #ff3636 100%); */
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 30%, #ecb043 66%, #ec2b2b 100%);
     background-size: 400% 400%;
-    -webkit-animation: Gradient 15s ease infinite;
-    -moz-animation: Gradient 15s ease infinite;
-    animation: Gradient 15s ease infinite;
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
 }
 
 @-webkit-keyframes Gradient {
@@ -114,4 +118,28 @@ h6 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%)
+}
+
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
