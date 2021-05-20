@@ -9,8 +9,8 @@ echo "Welcome $username!"
 read -p "Enter Blog Name: "  blogName
 
 sudo apt update
-sudo apt upgrade -y
-sudo apt install sed
+# sudo apt upgrade -y
+sudo apt install sed -y
 
 # ENABLE SSH
 sudo rm -r /etc/ssh/sshd_not_to_be_run
