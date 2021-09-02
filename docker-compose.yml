@@ -1,0 +1,19 @@
+version: "3.0"
+services: 
+    myst:
+        container_name: mysteriumNode
+        image: mysteriumnetwork/myst:0.53.3-alpine
+        command: [ "service", "--agreed-terms-and-conditions" ]
+        ports:
+            - 4449:4449
+        cap_add: 
+            - NET_ADMIN
+        volumes:
+            - "./data:/var/lib/mysterium-node"
+        networks: 
+            - myst-network
+        restart: always
+        devices: 
+            - /dev/net/tun:/dev/net/tun
+networks:
+    myst-network:
