@@ -272,16 +272,16 @@ echo "################################################
 
 ################################################"
 
-docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
 
 echo "################################################
 
