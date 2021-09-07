@@ -90,6 +90,6 @@ echo "##########################################################################
             View more info on your VPN IP fron link below
             https://whatismyipaddress.com/ip/$PUBLIC_IP
 
-              Visit http://$IP:9000/ to monitor containers
+        Visit http://$IP:9000/ to monitor containers
 
 ##########################################################################"
