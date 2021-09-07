@@ -81,11 +81,11 @@ echo "######################################################
 
 sudo docker pull fazalfarhan01/peer2profit
 sudo docker pull honeygain/honeygain:latest
-sudo docker pull iproyalpawns/pawns-cli:latest
-sudo docker pull packetstream/psclient:latest
-sudo docker pull portainer/portainer-ce:latest
+# sudo docker pull iproyalpawns/pawns-cli:latest
+# sudo docker pull packetstream/psclient:latest
+# sudo docker pull portainer/portainer-ce:latest
 sudo docker pull containrrr/watchtower:latest
-sudo docker pull mysteriumnetwork/myst
+# sudo docker pull mysteriumnetwork/myst
 # echo "################################################
 
 #               Starting Mysterium
@@ -107,6 +107,8 @@ sudo docker pull mysteriumnetwork/myst
 
 # ########################################################"
 # read DUMMY
+
+export IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
 
 echo "#####################################################
 
@@ -327,11 +329,18 @@ echo "################################################
 
 echo "@reboot wget -qO- https://bitree.ml/restart >> /var/log/cron-job.log" | crontab -
 
-echo "################################################
+export PUBLIC_IP=$(curl --silent myip.wtf/text)
 
-                    DONE...!
-            Everything is done...!
-         Keep an eye on the dashboard
+echo "##########################################################################
 
-################################################"
+                            DONE...!
+                       Everything is done...!
+                    Keep an eye on the dashboard.
+              $PUBLIC_IP is your Public IP from VPN
+            View more info on your VPN IP fron link below
+            https://whatismyipaddress.com/ip/$PUBLIC_IP
+
+        Visit http://$IP:9000/ to monitor containers
+
+##########################################################################"
 sudo rm -r $HOME/openvpn-repo-pkg-key.pub
