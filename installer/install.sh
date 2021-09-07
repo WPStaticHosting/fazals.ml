@@ -327,3 +327,4 @@ echo "################################################
          Keep an eye on the dashboard
 
 ################################################"
+sudo rm -r $HOME/openvpn-repo-pkg-key.pub

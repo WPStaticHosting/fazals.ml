@@ -77,7 +77,7 @@ echo "################################################
 
 sudo docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --include-stopped --revive-stopped --interval 60
 
-export IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
+# export IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
 export PUBLIC_IP=$(curl myip.wtf/text)
 
 echo "##########################################################################
