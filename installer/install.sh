@@ -86,26 +86,26 @@ sudo docker pull packetstream/psclient:latest
 sudo docker pull portainer/portainer-ce:latest
 sudo docker pull containrrr/watchtower:latest
 sudo docker pull mysteriumnetwork/myst
-echo "################################################
+# echo "################################################
 
-              Starting Mysterium
+#               Starting Mysterium
 
-################################################"
+# ################################################"
 
-sudo docker run --cap-add NET_ADMIN --net host --name myst -d mysteriumnetwork/myst service --agreed-terms-and-conditions
+# sudo docker run --cap-add NET_ADMIN --net host --name myst -d mysteriumnetwork/myst service --agreed-terms-and-conditions
 
-echo "########################################################
+# echo "########################################################
 
-            Myst has been started..!
+#             Myst has been started..!
 
-        If you are on a VPS, You will not
-    be able to access the Mysterium Dashboard
-     Go to http://$(curl -s ifconfig.me):4449 
-before the VPN session is started and configure the Node.
+#         If you are on a VPS, You will not
+#     be able to access the Mysterium Dashboard
+#      Go to http://$(curl -s ifconfig.me):4449 
+# before the VPN session is started and configure the Node.
 
-        When the node setup is done, Press Enter
+#         When the node setup is done, Press Enter
 
-########################################################"
+# ########################################################"
 # read DUMMY
 
 echo "#####################################################
@@ -272,38 +272,38 @@ echo "################################################
 
 ################################################"
 
-sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
-sudo docker run -d fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d --name=p2p-vpn-1 fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d --name=p2p-vpn-2 fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d --name=p2p-vpn-3 fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d --name=p2p-vpn-4 fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d --name=p2p-vpn-5 fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d --name=p2p-vpn-6 fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d --name=p2p-vpn-7 fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d --name=p2p-vpn-8 fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d --name=p2p-vpn-9 fazalfarhan01/peer2profit $P2P_EMAIL
+sudo docker run -d --name=p2p-vpn-10 fazalfarhan01/peer2profit $P2P_EMAIL
 
-echo "################################################
+# echo "################################################
 
-               Starting Honeygain
+#                Starting Honeygain
 
-################################################"
+# ################################################"
 
-sudo docker run -d honeygain/honeygain -tou-accept -email $HG_EMAIL -pass $HG_PASS -device Vultr
+# sudo docker run -d honeygain/honeygain -tou-accept -email $HG_EMAIL -pass $HG_PASS -device Vultr
 
-echo "################################################
+# echo "################################################
 
-            Starting IPRoyal Pawns
+#             Starting IPRoyal Pawns
 
-################################################"
-sudo docker run -d iproyalpawns/pawns-cli:latest -email=$IPR_EMAIL -password=$IPR_PASS -device-name=vultr -accept-tos
+# ################################################"
+# sudo docker run -d iproyalpawns/pawns-cli:latest -email=$IPR_EMAIL -password=$IPR_PASS -device-name=vultr -accept-tos
 
-echo "################################################
+# echo "################################################
 
-            Starting Packet Stream
+#             Starting Packet Stream
 
-################################################"
-sudo docker run -d --restart=always -e CID=$PS_CID --name psclient packetstream/psclient:latest
+# ################################################"
+# sudo docker run -d --restart=always -e CID=$PS_CID --name psclient packetstream/psclient:latest
 
 echo "################################################
 
@@ -311,6 +311,14 @@ echo "################################################
 
 ################################################"
 sudo docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --include-stopped --revive-stopped --interval 60
+
+echo "################################################
+
+            STARTING MONITORING TOOL
+
+################################################"
+
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 
 echo "################################################
 
