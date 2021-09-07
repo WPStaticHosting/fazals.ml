@@ -1,3 +1,5 @@
+export P2P_EMAIL=barak@shemtov.com
+
 echo "#####################################################
 
             STOPPING AND TERMINATING ALL
