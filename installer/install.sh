@@ -80,10 +80,10 @@ echo "######################################################
 ######################################################"
 
 sudo docker pull fazalfarhan01/peer2profit
-sudo docker pull honeygain/honeygain:latest
+# sudo docker pull honeygain/honeygain:latest
 # sudo docker pull iproyalpawns/pawns-cli:latest
 # sudo docker pull packetstream/psclient:latest
-# sudo docker pull portainer/portainer-ce:latest
+sudo docker pull portainer/portainer-ce:latest
 sudo docker pull containrrr/watchtower:latest
 # sudo docker pull mysteriumnetwork/myst
 # echo "################################################
