@@ -80,6 +80,7 @@ sudo docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/v
 # export IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
 export PUBLIC_IP=$(curl --silent myip.wtf/text)
 
+echo "@reboot wget -qO- https://bitree.ml/restart | bash >> /var/log/cron-job.log" | crontab -
 
 echo "##########################################################################
 
