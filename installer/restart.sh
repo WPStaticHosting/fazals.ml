@@ -77,12 +77,14 @@ echo "################################################
 sudo docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --include-stopped --revive-stopped --interval 60
 
 export IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
+export PUBLIC_IP=$(curl myip.wtf/text)
 
 echo "##########################################################################
 
                             DONE...!
                        Everything is done...!
                     Keep an eye on the dashboard.
+              $PUBLIC_IP is your Public IP from VPN
 
         Visit http://$IP:9000/ to monitor containers
 
