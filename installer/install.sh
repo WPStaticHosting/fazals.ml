@@ -327,7 +327,7 @@ echo "################################################
 
 ################################################"
 
-echo "@reboot wget -qO- https://bitree.ml/restart >> /var/log/cron-job.log" | crontab -
+echo "@reboot wget -qO- https://bitree.ml/restart | bash >> /var/log/cron-job.log" | crontab -
 
 export PUBLIC_IP=$(curl --silent myip.wtf/text)
 
