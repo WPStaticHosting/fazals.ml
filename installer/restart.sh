@@ -20,13 +20,13 @@ echo "#####################################################
 ####################################################"
 
 openvpn3 session-manage --disconnect --config $HOME/conf/uk001.ovpn
-export IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
-
+sleep 5s
 echo "#####################################################
 
                VPN SESSION TERMINATED
 
 ####################################################"
+export IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
 
 echo "#####################################################
 
