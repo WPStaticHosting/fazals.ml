@@ -80,13 +80,16 @@ sudo docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/v
 # export IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
 export PUBLIC_IP=$(curl myip.wtf/text)
 
+
 echo "##########################################################################
 
                             DONE...!
                        Everything is done...!
                     Keep an eye on the dashboard.
               $PUBLIC_IP is your Public IP from VPN
+            View more info on your VPN IP fron link below
+            https://whatismyipaddress.com/ip/$PUBLIC_IP
 
-        Visit http://$IP:9000/ to monitor containers
+              Visit http://$IP:9000/ to monitor containers
 
 ##########################################################################"
