@@ -1,7 +1,15 @@
-export VPN_EMAIL=barakshemtov.bst@gmail.com
-export VPN_PASSWORD=5ibLnBU49SN9ivK
+# export VPN_EMAIL=barakshemtov.bst@gmail.com
+# export VPN_PASSWORD=5ibLnBU49SN9ivK
 
-export P2P_EMAIL=barak@shemtov.com
+# export P2P_EMAIL=barak@shemtov.com
+echo "Enter VPN Email"
+read VPN_EMAIL
+
+echo "Enter VPN Password"
+read VPN_PASSWORD
+
+echo "Enter Peer2Profit Email"
+read P2P_EMAIL
 
 export HG_EMAIL=barakshemtov.bst@gmail.com
 export HG_PASS=DvVWgvz3qQApV2c

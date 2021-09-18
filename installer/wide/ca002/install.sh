@@ -134,7 +134,7 @@ $VPN_PASSWORD" > $HOME/conf/login.conf
 echo "client
 dev tun
 proto tcp
-remote uk002.widexyz.com 9001
+remote ca002.widexyz.com 9001
 resolv-retry infinite
 nobind
 persist-key
