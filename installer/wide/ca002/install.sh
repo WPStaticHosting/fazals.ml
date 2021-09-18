@@ -147,7 +147,7 @@ verb 3
 sndbuf 0
 rcvbuf 0
 auth-user-pass $HOME/conf/login.conf
-script-security 2 
+script-security 2
 redirect-gateway def1
 
 <ca>
